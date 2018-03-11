@@ -5,13 +5,13 @@ require_relative '../../lib/purchase'
 require_relative '../../lib/supplier_gateway'
 
 describe Purchase do
-  describe 'parse correct auth data (mock example)' do
-    let!(:order) { Order.new }
-    it 'should send purchase message to the gateway' do
-      expect_any_instance_of(SupplierGateway).to receive(:purchase)
-      expect(Purchase.new(order).make_purchase).to eq(true)
-    end
-  end
+  # describe 'parse correct auth data (mock example)' do
+  #   let!(:order) { Order.new }
+  #   it 'should send purchase message to the gateway' do
+  #     expect_any_instance_of(SupplierGateway).to receive(:purchase)
+  #     expect(Purchase.new(order).make_purchase).to eq(true)
+  #   end
+  # end
 
   describe 'parse correct auth data (stub example 1)' do
     let!(:order) {
